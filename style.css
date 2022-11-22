@@ -1,0 +1,278 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'orbitron';
+   src: url(/Multimedia/Fuentes/orbitron/Orbitron-Regular.ttf);
+}
+@font-face {
+    font-family: 'PokemonLetra';
+   src: url(/Multimedia/Fuentes/pokemonoriginal/PokemonSolid.ttf);
+}
+
+html{
+    --colorGasly:  rgb(200, 181, 246);
+    --colorHeader:linear-gradient(to right, blue, rgb(247, 3, 3));
+    --colorFondo: rgb(0, 221, 255); 
+    --sombras: 0px 10px 15px rgb(45, 45, 45);
+    --sombrasTexto: 2px 2px 2px black;
+    --colorSectionMain: rgba(255, 255, 255, 0.8);
+    min-width: 491px;
+    max-height: max-content;
+    background-image: url(/Multimedia/Fotos/Fondo.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 50% 50%; 
+    background-size: 100% 100% ;
+    background-size: cover;
+  }
+header{
+    border: 8px solid black;
+    background: var(--colorHeader);
+    border-radius: 1rem;
+    box-shadow: var(--sombras);
+    padding: 1rem;
+    margin: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+
+}
+img.titulo{
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    max-height: 10rem;
+    min-width: 4rem;
+    filter: drop-shadow(-2px 2px 15px rgba(0, 0, 0, 0.7));
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}  
+
+section.headermain{
+    background-color: var(--colorSectionMain);
+    box-shadow: var(--sombras);
+    border-radius: 2rem;
+    border: 3px solid black;
+    max-height: 8rem;
+    display:flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    align-items: center;
+    width: 90%;
+    padding: 2rem;
+    max-width: 50rem;
+}
+img.h1svg{
+    max-height: 10rem;
+    max-width: 5rem;
+    filter:  drop-shadow(-1px 1px 5px rgba(0, 0, 0, 0.7));
+}
+img.h1svg:hover{
+    animation: movimientopoke 1s;
+    animation-iteration-count: 3;
+}
+@keyframes movimientopoke{
+    20%{
+        transform: translate(0.5rem) rotate(25deg);
+    }
+    40%{
+        transform: translate(-0.5rem) rotate(-25deg);
+    }
+}
+section.form{
+    background-color: var(--colorSectionMain);
+    box-shadow: var(--sombras);
+    border: 3px solid black;
+    border-radius: 2rem;
+    padding: 2rem;
+    margin: 0.5rem;
+    width: 40%;
+    min-width: 20rem;
+    max-width: 40rem;
+}
+form{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+button{
+    box-shadow: 1px 2px 3px black;
+    padding:0.2rem;
+    margin: 0.5rem;
+    border: 2px solid black;
+    border-radius: 0.5rem;
+}
+button:hover{
+    box-shadow: inset 1px 1px 1px black;
+}
+li{
+    list-style: none;
+}
+input{
+    box-shadow: inset 0px 0px 4px black;
+    width: 100%;
+    min-height: 2rem;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: larger;
+    font-weight: bolder;
+}
+h1{
+    margin: 1rem;
+    text-align: center;
+    /*font-family: sans-serif;*/ /*lo deje comentado por si no te convencia la nueva fuente*/
+    font-family: 'orbitron',sans-serif;
+    font-size: 2.5rem;
+    font-variant: small-caps;
+    color: grey;
+     -webkit-text-stroke: 1px rgb(0, 0, 0);
+        /*text-shadow: var(--sombrasTexto);*/
+     text-shadow: 
+    2px 2px 1px rgb(255, 0, 0),
+    3px 3px 2px rgb(0, 0, 255);
+    
+}
+section.principal{
+    background-image: url(/Multimedia/Fotos/Gaslygif.gif);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-color:var(--colorGasly);
+    border-radius: 1rem;
+    height: 60vh;
+    width: 90%;
+    max-width: 70rem;
+    border: 10px solid grey ;
+    box-shadow: inset 0px 0px 15px black;
+    display: flex;
+    justify-content: center;
+    margin-top:2rem;
+    
+}
+section.pokemon{
+    background-position: 50% 50%;
+    background-color:var(--colorSectionMain);
+    border-radius: 1rem;
+    height: max-content;
+    width: 95%;
+    max-width: 35rem;
+    border: 10px solid grey ;
+    box-shadow: inset 0px 0px 15px black;
+    margin-top:2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 2rem;
+    
+}
+p.mensaje{
+    padding: 2rem;
+    margin:1rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: larger;
+    font-weight: bolder;
+    text-transform: uppercase;
+    line-height : 40px;
+    max-width: max-content;
+}
+p.titulo{
+    font-size: 2rem;
+    padding: 1rem;
+    font-weight: bolder;
+    font-family: 'pokemonLetra',sans-serif;
+    -webkit-text-stroke: 2px black;
+    color:goldenrod;
+    letter-spacing: 0.7rem;
+    filter:  drop-shadow(-1px 1px 10px rgb(10, 0, 146));
+}
+p.noImagen{
+    font-size: large;
+    font-weight: 900;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 1rem;
+}
+img.imagenPokemon{
+    width:170px;
+    border-radius: 2rem;
+}
+div.info{
+
+    border-radius: 2rem;
+    margin: 2rem;
+    width: 90%;
+    background-color:  rgb(118, 118, 221);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: max-content;
+}
+p.tituloStats{
+    width: 20%;
+    height: 2px;
+}
+img.grande{
+    filter:  drop-shadow(-1px 1px 10px rgb(10, 0, 146));
+}
+p.estadistica{
+    background-color: var(--colorSectionMain);
+    border: 5px solid black;
+    border-radius: 1rem;
+    margin: 1rem;
+    font-size: 20px;
+    font-weight: bolder;
+    padding:0.5rem;
+    width: 90%;
+    box-shadow: 0px 0px 15px black;
+
+}
+section.pokemon.flip{
+    position: relative;
+    transition: all 1s ease;
+    transform: rotateY(360deg);
+    transform-style: preserve-3d;
+}
+
+section.form form {
+    position: relative;
+}
+
+ul.preview {
+    position: absolute;
+    background: var(--colorSectionMain);
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    width: 10rem;
+    z-index: 2;
+
+}
+li.borrar{
+    cursor: pointer;
+    font-size: larger;
+    text-transform: capitalize;
+    padding: 1rem;
+    z-index: 2;
+}
+li.borrar:hover{
+    background-color: grey;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
